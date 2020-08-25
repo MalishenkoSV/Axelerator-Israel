@@ -1,0 +1,98 @@
+.main {
+  @include adaptive-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: $mobile-width) {
+    margin-top: -44px;
+  }
+}
+
+.main__img {
+  @include fullscreen-img;
+}
+
+.main__description {
+  color: $font-color-white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  max-width: 400px;
+  margin: -350px auto 0;
+  padding: 0 20px 10px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0 15px 10px;
+    margin: -300px auto 20px;
+  }
+}
+
+.main__scroll {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 218px;
+  padding: 20px;
+  border-radius: 50%;
+  border: 2px dashed $font-color-white;
+  transition-duration: 0.5s;
+
+  @media (max-width: $mobile-width) {
+    padding: 11px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 200px;
+    background-color: $font-color-white;
+    top: 100px;
+    left: 50%;
+
+    @media (max-width: $mobile-width) {
+      height: 80px;
+    }
+  }
+
+  &:hover {
+    border: 2px dashed $bg-color-yellow;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover::before {
+    background-color: $bg-color-yellow;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.main__scroll span {
+  background-image: url("../img/icon_sprite@1x.png");
+  background-position: -211px -48px;
+  background-repeat: no-repeat;
+  display: block;
+  margin: auto;
+  border: 2px solid $font-color-white;
+  border-radius: 50%;
+  width: 53px;
+  height: 53px;
+  font-size: 0;
+
+  &:hover {
+    border: 2px solid $bg-color-yellow;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

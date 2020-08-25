@@ -1,0 +1,25 @@
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  height: auto;
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  // font-style: inherit;
+  outline: 1px solid red;
+}
+
+body {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  box-sizing: border-box;
+  color: $font-color-black;
+  background-color: $bg-color-document;
+}

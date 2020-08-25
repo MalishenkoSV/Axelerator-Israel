@@ -1,0 +1,33 @@
+.about {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 40px;
+  background-image: url("../img/watercolor_Bg@1x.png");
+  background-repeat: no-repeat;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+  }
+}
+
+.about__title {
+  margin-top: 0;
+  text-align: center;
+}
+
+.about__description {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 720px;;
+  font-size: 17px;
+  line-height: 170%;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 15px 50px;
+    text-align: left;
+  }
+}
+
+.about__video-container {
+  max-width: 870px;
+}

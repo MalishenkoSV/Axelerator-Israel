@@ -1,0 +1,9 @@
+.programs {
+  @include adaptive-block;
+  padding: 0 200px;
+}
+
+.programs__definition-list {
+  display: flex;
+  // flex-direction: column;
+}

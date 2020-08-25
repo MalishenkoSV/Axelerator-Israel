@@ -1,3 +1,16 @@
-h1 {
-  color: red;
-}
+@import "normalize.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "visually-hidden.scss";
+@import "scaffolding.scss";
+@import "blocks/button.scss";
+@import "blocks/form.scss";
+@import "blocks/header.scss";
+@import "blocks/main.scss";
+@import "blocks/about.scss";
+@import "blocks/title.scss";
+@import "blocks/video.scss";
+@import "blocks/programs.scss";
+@import "blocks/trip.scss";
+@import "blocks/how2go.scss";

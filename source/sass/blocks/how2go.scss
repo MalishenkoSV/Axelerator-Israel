@@ -1,0 +1,31 @@
+.how2go {
+  @include adaptive-block;
+  display: flex;
+  background-image: url("../img/paintcolor_Bg_2@1x.png");
+  background-repeat: no-repeat;
+}
+
+.how2go__poster {
+  @include fullscreen-img;
+  max-width: 581px;
+}
+
+.how2go__container {
+  width: 49.5%;
+
+}
+
+.how2go__title {
+}
+.title {
+}
+.how2go__text {
+}
+.how2go__details {
+}
+.how2go__list {
+}
+.how2go__item {
+}
+.how2go__aside {
+}

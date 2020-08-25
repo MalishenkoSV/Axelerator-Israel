@@ -1,0 +1,43 @@
+.trip {
+  @include adaptive-block;
+  position: relative;
+  padding: 170px 700px 200px 200px;
+  background-image: url("../img/bg-girl-flag_desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-girl-flag_mobile@1x.png");
+  }
+}
+
+.trip__title::before {
+  content: "";
+  left: -66px;
+  top: 118px;
+  width: 200px;
+  height: 250px;
+  position: absolute;
+  display: block;
+  background-image: url("../img/sprite_sketch@1x.png");
+  background-repeat: no-repeat;
+  background-position: -10px -730px;
+}
+
+.trip__text {
+  font-size: 17px;
+  line-height: 170%;
+  padding-right: 70px;
+}
+
+.trip__form {
+  position: relative;
+  margin-top: 64px;
+  display: flex;
+  padding: 0;
+}
+
+.trip__form .button {
+  position: absolute;
+  right: 0;
+}
