@@ -11,10 +11,11 @@ img {
 *::before,
 *::after {
   box-sizing: inherit;
+  outline: 1px solid red;
 }
 
 body {
-  font-family: "Fira Sans";
+  font-family: "Fira Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   box-sizing: border-box;

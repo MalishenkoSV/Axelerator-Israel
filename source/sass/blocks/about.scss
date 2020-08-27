@@ -13,18 +13,24 @@
 .about__title {
   margin-top: 0;
   text-align: center;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .about__description {
   margin: 0 auto;
   text-align: center;
-  max-width: 720px;;
+  max-width: 720px;
   font-size: 17px;
   line-height: 170%;
 
   @media (max-width: $mobile-width) {
-    padding: 0 15px 50px;
+    padding: 0 15px 47px;
     text-align: left;
+    font-size: 16px;
+    line-height: 165%;
   }
 }
 

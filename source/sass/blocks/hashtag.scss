@@ -1,0 +1,74 @@
+.hashtag {
+  // max-width: 1366px;
+  // margin: 0 auto;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url("../img/bg-masaisrael_desktop@1x.png");
+  // padding: 20px 13% 20px 58.6%;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-masaisrael_desktop@2x.png");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-masaisrael_mobile@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-masaisrael_mobile@2x.png");
+    }
+  }
+}
+
+.hashtag__wrapper {
+  width: 400px;
+  padding-top: 130px;
+  padding-right: 11%;
+  padding-bottom: 195px;
+  margin-left: auto;
+  box-sizing: content-box;
+
+  @media (max-width: $mobile-width) {
+    margin: 0;
+    padding: 20px 0;
+    width: auto;
+  }
+}
+
+.hashtag__title {
+  @media (max-width: $mobile-width) {
+    font-size: 40px;
+    line-height: 49px;
+  }
+}
+
+.hashtag__text {
+  opacity: 0.87;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  color: $font-color-white;
+  padding-bottom: 50px;
+
+  @media (max-width: $mobile-width) {
+    // padding: 0 20px 50px;
+  }
+}
+
+.hashtag__button {
+  padding-left: 40px;
+  position: relative;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    left: 15px;
+    top: 5px;
+    background-image: url("../img/icon-instagram.svg");
+  }
+}

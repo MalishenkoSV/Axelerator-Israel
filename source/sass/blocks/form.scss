@@ -5,15 +5,20 @@
 
 .form input {
   padding: 14px;
+  width: 100%;
   border-radius: 30px;
-  background-color: transparent;
   border-width: 2px;
   border-style: solid;
   border-color: $border-color;
-  width: 100%;
   font-weight: 500;
   font-size: 17px;
   line-height: 20px;
+  text-transform: uppercase;
+  background-color: transparent;
+
+  @media (max-width: $mobile-width) {
+    padding: 18px;
+  }
 }
 
 .form input[error] {
@@ -24,6 +29,5 @@
   border-color: $border-color-active;
 }
 
-.form__button {
-}
-
+// .form__button {
+// }

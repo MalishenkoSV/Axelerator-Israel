@@ -6,10 +6,10 @@
   position: relative;
 
   // @media (max-width: 1199px) {
-    // position: relative;
-    // top: 0;
-    // margin-top: -84px;
-    // left: calc(50% - 133px);
+  // position: relative;
+  // top: 0;
+  // margin-top: -84px;
+  // left: calc(50% - 133px);
   // }
 
   @media (max-width: $mobile-width) {
@@ -39,28 +39,35 @@
   max-width: 870px;
   height: auto;
 
-//   @media (max-width: $tablet-width-max) {
-//   }
+  //   @media (max-width: $tablet-width-max) {
+  //   }
 }
 
 .video__button {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   margin: 0;
-  // border: none;
+  border: none;
   padding: 0;
-  top: calc(50% - 50px);
-  left: calc(50% - 50px);
+  top: calc(50% - 32px);
+  left: calc(50% - 40px);
   font-size: 0;
   background-color: transparent;
-  background-image: url("../img/button-play.svg");
   background-repeat: no-repeat;
-  background-size: 100px 100px;
+  background-size: 80px 80px;
   cursor: pointer;
-  outline: none;
+  outline: 0;
+  background-image: url("../img/button-play.svg");
 
+  &:hover {
+    background-image: url("../img/button-play_hover.svg");
+  }
+
+  &:active {
+    background-image: url("../img/button-play_active.svg");
+  }
   // @media (max-width: 1199px) {
   //   width: 73px;
   //   height: 73px;
@@ -70,11 +77,11 @@
   // }
 }
 
-.video__button:hover,
-.video__button:focus {
-  background-color: rgba(0, 0, 0, 0.2);
-}
+// .video__button:hover,
+// .video__button:focus {
+//   background-color: rgba(0, 0, 0, 0.2);
+// }
 
-.video__button:active {
-  background-color: rgba(0, 0, 0, 0.6);
-}
+// .video__button:active {
+//   background-color: rgba(0, 0, 0, 0.6);
+// }

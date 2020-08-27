@@ -11,6 +11,10 @@
 
 .main__img {
   @include fullscreen-img;
+
+  @media (max-width: $mobile-width) {
+    min-width: 320px;
+  }
 }
 
 .main__description {
@@ -35,7 +39,7 @@
 .main__scroll {
   position: relative;
   display: inline-block;
-  margin: 0 auto 218px;
+  margin: 0 auto 140px;
   padding: 20px;
   border-radius: 50%;
   border: 2px dashed $font-color-white;

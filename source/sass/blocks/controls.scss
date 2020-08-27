@@ -1,0 +1,29 @@
+.controls__btn {
+  border: none;
+  background-color: transparent;
+  width: 102px;
+  height: 46px;
+  margin-bottom: 20px;
+  padding-left: 45px;
+  cursor: pointer;
+  color: #484848;
+  opacity: 0.87;
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.controls__btn--active {
+  width: 228px;
+  height: 68px;
+  background-color: $bg-color-yellow;
+  color: #FFFFFF;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  clip-path: polygon(0% 0%, 75% 0%, 90% 50%, 75% 90%, 0% 90%);
+}
+
+.controls__btn--general {
+
+}

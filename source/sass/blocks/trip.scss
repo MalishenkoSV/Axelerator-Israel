@@ -7,27 +7,46 @@
   background-position: right top;
 
   @media (max-width: $mobile-width) {
+    padding: 50px 15px 309px;
     background-image: url("../img/bg-girl-flag_mobile@1x.png");
+    background-position: center bottom;
+    margin-bottom: 56px;
   }
 }
 
-.trip__title::before {
-  content: "";
-  left: -66px;
-  top: 118px;
-  width: 200px;
-  height: 250px;
-  position: absolute;
-  display: block;
-  background-image: url("../img/sprite_sketch@1x.png");
-  background-repeat: no-repeat;
-  background-position: -10px -730px;
+.trip__title {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 25px;
+  }
+
+  &::before {
+    content: "";
+    left: -66px;
+    top: 118px;
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    display: block;
+    background-image: url("../img/sprite_sketch@1x.png");
+    background-repeat: no-repeat;
+    background-position: -10px -730px;
+
+    @media (max-width: $mobile-width) {
+      top: 5px;
+    }
+  }
 }
 
 .trip__text {
   font-size: 17px;
   line-height: 170%;
   padding-right: 70px;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+    font-size: 16px;
+    line-height: 160%;
+  }
 }
 
 .trip__form {
@@ -35,9 +54,27 @@
   margin-top: 64px;
   display: flex;
   padding: 0;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    margin: 24px auto 0;
+  }
+}
+
+.trip__form input {
+  @media (max-width: $mobile-width) {
+    padding-left: 25px;
+  }
 }
 
 .trip__form .button {
   position: absolute;
   right: 0;
+
+  @media (max-width: $mobile-width) {
+    position: relative;
+    margin: 7px auto 0;
+    padding: 19px;
+    width: 90%;
+  }
 }
