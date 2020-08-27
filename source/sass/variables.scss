@@ -1,6 +1,6 @@
 $desktop-width-min: 1024px;
-$tablet-width-max: 1023px;
-$tablet-width-min: 768px;
+$tablet-width: 1023px;
+// $tablet-width-min: 768px;
 $mobile-width: 767px;
 // $mobile-width-min: 320px;
 $max-width-container: 1200px;
@@ -14,7 +14,7 @@ $font-color-title: rgba(31, 192, 252, 1);
 $font-color-white: rgba(255, 255, 255, 1); // #ffffff
 $font-color-yellow: rgba(255, 195, 65, 1); // #ffc341
 $border-color-error: rgba(255, 0, 0, 0.75); // #ff0000
-$bg-color-document: lightgrey; //rgba(255, 255, 255, 1);
+$bg-color-document: rgba(255, 255, 255, 1);
 $bg-color-yellow: rgba(255, 195, 65, 1); // #ffc341
 $bg-color-white-op32: rgba(255, 255, 255, 0.32);
 
