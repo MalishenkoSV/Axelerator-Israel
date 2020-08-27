@@ -1,29 +1,113 @@
 .controls__btn {
+  position: relative;
   border: none;
   background-color: transparent;
-  width: 102px;
-  height: 46px;
-  margin-bottom: 20px;
-  padding-left: 45px;
   cursor: pointer;
   color: #484848;
   opacity: 0.87;
   font-family: "Fira Sans";
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 15px;
-  line-height: 18px;
+  line-height: 0;
+  text-align: left;
+  padding: 25px 10px 25px 65px;
+  width: 228px;
+  height: 68px;
+  outline: none;
+  clip-path: polygon(0% 0%, 75% 0%, 90% 50%, 75% 90%, 0% 90%);
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    left: 10px;
+    top: 15px;
+    background-repeat: no-repeat;
+    background-image: url("../../img/icon_sprite@1x.png");
+  }
+
+  &:hover {
+    color: $font-color-yellow;
+  }
 }
 
 .controls__btn--active {
-  width: 228px;
-  height: 68px;
   background-color: $bg-color-yellow;
+  border: none;
   color: #FFFFFF;
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
-  clip-path: polygon(0% 0%, 75% 0%, 90% 50%, 75% 90%, 0% 90%);
 }
 
 .controls__btn--general {
+  &::before {
+    background-position: -6px -118px;
+  }
 
+  &:hover::before  {
+    background-position: -101px -117px;
+  }
+
+  &:hover + .controls__btn--active::before,
+  & + .controls__btn--active::before {
+    background-position: -53px -117px;
+  }
+}
+
+.controls__btn--academic {
+  &::before {
+    background-position: -10px -8px;
+  }
+
+  &:hover::before  {
+    background-position: -10px -64px;
+  }
+
+  & + .controls__btn--active::before {
+    background-position: -67px -8px;
+  }
+}
+
+.controls__btn--internship {
+  &::before {
+    background-position: -170px -5px;
+  }
+
+  &:hover::before  {
+    background-position: -171px -94px;
+  }
+
+  & + .controls__btn--active::before,
+  & + .controls__btn--active:hover::before  {
+    background-position: -172px -49px;
+  }
+}
+
+.controls__btn--volunteering {
+  &::before {
+    background-position: -65px -61px;
+  }
+
+  &:hover::before  {
+    background-position: -121px -56px;
+  }
+
+  & + .controls__btn--active::before {
+    background-position: -120px -7px;
+  }
+}
+
+.controls__btn--religious {
+  &::before {
+    background-position: 1px -168px;
+  }
+
+  &:hover::before  {
+    background-position: -90px -168px;
+  }
+
+  & + .controls__btn--active::before {
+    background-position: -47px -168px;
+  }
 }

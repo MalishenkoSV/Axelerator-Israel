@@ -1,3 +1,49 @@
 .live-in {
-  font-weight: inherit;
+}
+
+.live-in__container {
+}
+
+.live-in__title {
+  text-align: center;
+}
+
+.live-in__text {
+  text-align: center;
+}
+
+.live-in__gallery {
+  width: 100%;
+  height: auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.gallery__photo {
+
+}
+
+.photo {
+  position: relative;
+}
+
+.photo__img {
+}
+
+.photo__text {
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  bottom: 0;
+  text-align: left;
+  color: $font-color-white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+  max-width: 80%;
+  line-height: 25px;
 }

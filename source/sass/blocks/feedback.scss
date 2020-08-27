@@ -1,0 +1,110 @@
+// .feedback {
+// }
+
+// .feedback__container {
+// }
+
+.feedback__title {
+  text-align: center;
+}
+
+// .feedback__wrapper {
+// }
+
+.feedback__comment {
+  overflow: hidden;
+}
+
+.comment {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.comment__container {
+  position: relative;
+}
+
+.comment__author {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  padding-left: 40px;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+  }
+}
+
+.comment__destination {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  padding-left: 40px;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+  }
+}
+
+.comment__program {
+  color: $font-color-title;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+}
+
+.comment__text {
+  font-size: 17px;
+  line-height: 170%;
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: 160%;
+  }
+}
+
+.comment__more {
+  padding-left: 40px;
+  margin-bottom: 50px;
+  display: block;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+  }
+}
+
+.comment__navigation {
+  padding-left: 40px;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+    position: absolute;
+    margin: 0 auto;
+  }
+}
+
+// .comment__count {
+// }
+
+.comment__navigation-buttons {
+  display: inline;
+}
+
+// .navigation {
+// }
+// .navigation__button {
+// }
+
+.feedback__social {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.feedback__social .social__item {
+  margin: 0 0 0 15px;
+}

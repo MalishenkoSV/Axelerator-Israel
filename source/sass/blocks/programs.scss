@@ -3,6 +3,10 @@
   padding: 0 200px;
 }
 
+.programs__container {
+  display: flex;
+}
+
 .programs__btns {
   display: flex;
   flex-direction: column;
@@ -18,4 +22,8 @@
 
 .programs__item--shown {
   display: block;
+}
+
+.programs__list--shown {
+  display: flex;
 }

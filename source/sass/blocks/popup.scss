@@ -1,0 +1,49 @@
+.overlay {
+  display: none;
+}
+
+.pop-up-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  background-color: rgba(92, 110, 100, 0.5);
+  z-index: 100;
+  filter: blur(10px);
+}
+
+.popup__overlay {
+  position: fixed;
+  max-width: 490px;
+  height: auto;
+  padding: 25px;
+  top: calc(50% - 240px);
+  left: calc(50% - 240px);
+  z-index: 200;
+  transform: translateY(-1000px);
+  transition: 0.3s;
+}
+
+.popup__form {
+  display: flex;
+}
+
+.popup__show {
+  display: block;
+  animation: bounce 0.6s;
+  transform: translateY(0);
+}
+
+.popup__error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
+
+.popup__confirm {
+  display: none;
+}
