@@ -1,7 +1,13 @@
-.live-in {
-}
 
 .live-in__container {
+  width: 100%;
+  max-width: 1366px;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  justify-content: center;
 }
 
 .live-in__title {
@@ -17,21 +23,202 @@
   height: auto;
 }
 
-.gallery {
+
+.live-in__left-side {
+  width: 36%;
+}
+
+.live-in__right-side {
+  width: 49%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 66px;
+  justify-content: space-between;
+  margin-left: 13px;
+}
+
+.life-in-Israel__wrapper {
+  position: relative;
+  padding-bottom: 53%;
+}
+
+.live-in p {
+  width: auto;
+  margin: 0;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 25px;
+  color: #FFFFFF;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  text-align: left;
+  position: absolute;
+}
+
+.live-in-__item- {
+  position: absolute;
+  height: auto;
+
+  &-first {
+    width: 36%;
+    top: -2.9%;
+    left: 7.7%;
+  }
+
+  &-second {
+    width: 15.6%;
+    top: 6.6%;
+    left: 44%;
+  }
+
+  &-third {
+    width: 30%;
+    top: 6.6%;
+    left: 61.8%;
+  }
+
+  &-fourth {
+    width: 30%;
+    top: 55%;
+    left: 44%;
+  }
+
+  &-fifth {
+    width: 16%;
+    top: 55%;
+    left: 76.3%
+  }
+
+  &-first p {
+    bottom: 39px;
+    left: 39px;
+  }
+
+  &-second p {
+    width: 10px;
+    bottom: 42px;
+    left: 27px;
+  }
+
+  &-third p {
+    bottom: 40px;
+    left: 30px;
+  }
+
+  &-fourth p {
+    bottom: 42px;
+    left: 32px;
+  }
+
+  &-fifth p {
+    bottom: 43px;
+    left: 24px;
+  }
+}
+
+@media(max-width: 1023px) {
+  .live-in {
+    margin-bottom: 70px;
+  }
+
+  .live-in__wrapper {
+    padding-bottom: 55%;
+  }
+
+  .live-in__item p {
+    font-size: 15px;
+    line-height: 19px;
+    bottom: 20px;
+    left: 15px;
+  }
+}
+
+@media(max-width: 767px) {
+  .live-in {
+    margin-bottom: 65px;
+    background: none;
+
+    &::after {
+      background: none;
+    }
+  }
+
+  .live-in__pagination .swiper-pagination-bullet {
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+  }
+
+  .live-in__pagination .swiper-pagination-bullet-active {
+    background: $bg-img-gradient;
+    width: 8px;
+    height: 8px;
+  }
+
+  .live-in__wrapper {
+    padding: 0;
+  }
+
+  .live-in__container {
+    padding-bottom: 43px;
+  }
+
+  .live-in h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    line-height: 39px;
+  }
+
+  .live-in p {
+    width: 100%;
+    text-align: left;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 160%;
+    opacity: 0.87;
+    margin-bottom: 32px;
+  }
+
+  .live-in img {
+    display: block;
+    margin: 0 auto;
+    width: 265px;
+    height: 397px;
+    object-fit: cover;
+    object-position: right;
+  }
+
+  .live-in__item-fourth img {
+    object-position: -99px;
+  }
+
+  .live-in__item p {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    width: 256px;
+    bottom: -9px;
+    left: 50%;
+    margin-left: -128px;
+  }
+
+  .live-in__item {
+    position: static;
+  }
+
+  .live-in__pagination {
+    position: absolute;
+    bottom: 4px;
+    left: 11px;
+  }
+}
+
+.live-in__gallery {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-}
-
-.gallery__photo {
-
-}
-
-.photo {
-  position: relative;
-}
-
-.photo__img {
 }
 
 .photo__text {

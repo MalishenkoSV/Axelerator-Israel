@@ -8,28 +8,41 @@
 .social__item a {
   display: block;
   margin: 15px;
-  padding: 15px;
+  padding: 0;
   font-size: 0;
-  background-repeat: no-repeat;
-  background-position: 3px;
+  transition-duration: 0.5s;
+  // background-repeat: no-repeat;
+  // background-position: 3px;
 }
 
-.social__item--fb a {
-  background-image: url("../img/icon-facebook.svg");
+.social__item svg {
+  fill: $font-color-black;
 }
 
-.social__item--tw a {
-  background-image: url("../img/icon-twitter.svg");
+.social__list a:hover {
+  opacity: 0.8;
 }
 
-.social__item--ins a {
-  background-image: url("../img/icon-instagram.svg");
+.social__list a:active {
+  opacity: 0.3;
 }
 
-.social__item--wup a {
-  background-image: url("../img/icon-social-whatsapp.svg");
-}
+// .social__item--fb a {
+//   background-image: url("../img/icon-facebook.svg");
+// }
 
-.social__item--tlgrm a {
-  background-image: url("../img/icon-social-telegram.svg");
-}
+// .social__item--tw a {
+//   background-image: url("../img/icon-twitter.svg");
+// }
+
+// .social__item--ins a {
+//   background-image: url("../img/icon-instagram.svg");
+// }
+
+// .social__item--wup a {
+//   background-image: url("../img/icon-social-whatsapp.svg");
+// }
+
+// .social__item--tlgrm a {
+//   background-image: url("../img/icon-social-telegram.svg");
+// }

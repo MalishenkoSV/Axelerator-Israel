@@ -20,6 +20,7 @@
   <link type="font/woff" rel="preload" as="font" href="fonts/raleway-extrabold.woff">
   <link type="font/woff" rel="preload" as="font" href="fonts/raleway-black.woff">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
@@ -28,6 +29,9 @@
 </head>
 
 <body>
+  <div style="display: none;">
+    <include src="build/img/sprite/sprite_auto.svg"></include>
+  </div>
   <header class="header">
     <ul class="header__comunication comunication">
       <li class="comunication__item">
@@ -36,13 +40,9 @@
       <li class="comunication__item header__logo">
         <picture>
           <source type="image/png" media="(max-width: 767px)" srcset="img/logo_header_mobile@2x.png 1x, img/logo_header_mobile@2x.png 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="img/logo_header@1x.webp 1x, img/logo_header@2x.webp 2x">
-          <source type="image/webp" media="(max-width: 767px)"
-            srcset="img/logo_header_mobile@1x.webp 1x, img/logo_header_mobile@2x.webp 2x">
-          <img src="img/logo_header@1x.png" width="138" height="48"
-            srcset="img/logo_header@1x.png 1x, img/logo_header@2x.png 2x"
-            alt="Логотип компании, занимающейся продвижением программы.">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/logo_header@1x.webp 1x, img/logo_header@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/logo_header_mobile@1x.webp 1x, img/logo_header_mobile@2x.webp 2x">
+          <img src="img/logo_header@1x.png" width="138" height="48" srcset="img/logo_header@1x.png 1x, img/logo_header@2x.png 2x" alt="Логотип компании, занимающейся продвижением программы.">
         </picture>
       </li>
       <li class="comunication__item">
@@ -53,38 +53,27 @@
 
 
   <main class="main">
-    <h1 class="main__title visually-hidden">Израиль</h1>
-    <picture>
-      <source type="image/webp" media="(max-width: 767px)" srcset="img/main-screen_mobile@1x.webp 1x, img/main-screen_mobile@1x.webp 2x">
-      <source type="image/png" media="(max-width: 767px)" srcset="img/main-screen_mobile@1x.png 1x, img/main-screen_mobile@1x.png 2x">
-      <source type="image/webp" media="(min-width: 768px)" srcset="img/main-screen_desktop@1x.webp 1x, img/main-screen_desktop@2x.webp 2x">
-      <img class="main__img" src="img/main-screen_desktop@1x.png" srcset="img/main-screen_desktop@1x.png 1x, img/main-screen_desktop@2x.png 2x" alt="Прекрасный вид города">
-    </picture>
-    <p class="main__description">Учёба,
-      путешествие и карьера для еврейской молодёжи</p>
+    <h1 class="visually-hidden">Израиль</h1>
+    <p class="main__description">Учёба, путешествие и карьера для еврейской молодёжи</p>
     <a class="main__scroll" href="#about" title="Перейти к подробностям">
       <span>Перейти к подробностям</span>
     </a>
   </main>
 
-
   <section class="about" id="about">
-    <h2 class="about__title title">О программе</h2>
-    <p class="about__description about">«Маса» — совместный проект правительства Израиля и Еврейского агентства
-      Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения
-      программ предусмотрен грант от 4200 до 8400$.</p>
-
+    <h2>О программе</h2>
+    <p class="about__description about">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
       <div class="about__video-container video">
         <picture>
             <source type="image/webp" media="(max-width: 767px)" srcset="img/video_block_mobile@1x.webp 1x, img/video_block_mobile@2x.webp 2x">
             <source type="image/png" media="(max-width: 767px)" srcset="img/video_block_mobile@1x.png 1x, img/video_block_mobile@2x.png 2x">
             <source type="image/webp" media="(min-width: 1200px)" srcset="img/video_block_desktop@1x.webp 1x, img/video_block_desktop@2x.webp 2x">
-            <img class="video__poster" src="img/video_block_desktop@2x.png" srcset="img/video_block_desktop@2x.png 1x, img/video_block_desktop@2x.png 2x" width="870" height="460"
-                                                                                                    alt="Молодежь за костром обсуждают свои планы по программе.">
+            <img class="video__poster" src="img/video_block_desktop@2x.png" srcset="img/video_block_desktop@2x.png 1x, img/video_block_desktop@2x.png 2x" width="870" height="460" alt="Молодежь за костром обсуждают свои планы по программе.">
         </picture>
         <button type="button" class="video__button">Воспроизвести</button>
     </div>
   </section>
+
   <section class="programs">
     <h2 class="programs__title title">Программы</h2>
     <div class="programs__container">
@@ -98,41 +87,42 @@
       <ul class="programs__list">
         <li class="programs__item programs__item--general programs__item--shown">
           <div class="programs__description description__text programs__description--general">
-            <h4 class="description__title title title__small">Общие</h4>
+            <h3 class="description__title title title__small">Общие</h3>
             Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
           </div>
           <div class="programs__description description__text programs__description--general">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</div>
         </li>
         <li class="programs__item programs__item--academic">
           <div class="programs__description description__text programs__description--academic">
-            <h4 class="description__title title title__small">Академические</h4>
+            <h3 class="description__title title title__small">Академические</h3>
             Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
           </div>
           <div class="programs__description description__text programs__description--academic">Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</div>
         </li>
         <li class="programs__item programs__item--internship">
           <div class="programs__description description__text programs__description--internship">
-            <h4 class="description__title title title__small">Стажировки</h4>
+            <h3 class="description__title title title__small">Стажировки</h3>
             Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
           </div>
         </li>
         <li class="programs__item programs__item--volunteering">
           <div class="programs__description description__text programs__description--volunteering">
-            <h4 class="description__title title title__small">Волонтёрство</h4>
+            <h3 class="description__title title title__small">Волонтёрство</h3>
             Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
           </div>
         </li>
         <li class="programs__item programs__item--religious">
           <div class="programs__description description__text programs__description--religious">
-            <h4 class="description__title title title__small">Религиозные</h4>
+            <h3 class="description__title title title__small">Религиозные</h3>
             Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.
           </div>
         </li>
       </ul>
     </div>
   </section>
+
   <section class="trip">
-    <h2 class="trip__title title">Хочу поехать!</h2>
+    <h2>Хочу поехать!</h2>
     <p class="trip__text">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
     <form action="post" class="trip__form form">
       <label class="visually-hidden" for="tel">телефон</label>
@@ -140,93 +130,104 @@
       <button class="form__button button">перезвоните мне</button>
     </form>
   </section>
+
   <section class="how2go">
     <picture>
       <source type="image/webp" media="(min-width: 1024px)" srcset="img/img_how2drive@1x.webp 1x, img/img_how2drive@2x.webp 2x">
       <img class="how2go__poster" src="img/img_how2drive@1x.png" srcset="img/img_how2drive@2x.png 1x, img/img_how2drive@2x.png 2x" width="707" height="581" alt="Молодежь за  костром обсуждают свои планы по программе.">
-  </picture>
-  <div class="how2go__container">
-    <h2 class="how2go__title title">Как поехать</h2>
-    <p class="how2go__text">Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p><b class="how2go__details">Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</b>
-    <ul class="how2go__list">
-      <li class="how2go__item">Быть в возрасте от 16 до 30 лет</li>
-      <li class="how2go__item">Иметь оконченное среднее образование</li>
-      <li class="how2go__item">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</li>
-      <li class="how2go__item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
-    </ul>
-    <aside class="how2go__aside">Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.</aside>
+    </picture>
+    <div class="how2go__container">
+      <h2>Как поехать</h2>
+      <p class="how2go__text">Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p><b class="how2go__details">Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</b>
+      <ul class="how2go__list">
+        <li class="how2go__item">Быть в возрасте от 16 до 30 лет</li>
+        <li class="how2go__item">Иметь оконченное среднее образование</li>
+        <li class="how2go__item">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</li>
+        <li class="how2go__item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
+      </ul>
+      <aside class="how2go__aside">Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.</aside>
     </div>
   </section>
+
   <section class="live-in" id="gallery">
     <div class="live-in__container container">
-      <h2 class="live-in__title title">Жизнь в израиле</h2>
+      <h2>Жизнь в израиле</h2>
       <p class="live-in__text">Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.</p>
-      <div class="live-in__gallery gallery">
-        <div class="gallery__photo photo">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/01img_mobile@1x.webp 1x, img/01img_mobile@2x.webp 2x">
-            <source type="image/png" media="(max-width: 767px)" srcset="img/01img_mobile@1x.png 1x, img/01img_mobile@2x.png 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/01img_desktop@1x.webp 1x, img/01img_desktop@2x.webp 2x">
-            <img class="photo__img" src="img/01img_desktop@1x.png" srcset="img/01img_desktop@1x.png 1x, img/01img_desktop@2x.png 2x" width="482" height="732" alt="Святые места.">
-          </picture>
-          <h6 class="photo__text">Экскурсии по Израилю и знакомство с его историей</h6>
-        </div>
+      <div class="live-in__gallery gallery swiper-container">
+        <div class="live-in__wrapper swiper-wrapper">
+          <div class="gallery__photo live-in__item live-in__item-first photo swiper-slide">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/01img_mobile@1x.webp 1x, img/01img_mobile@2x.webp 2x">
+              <source type="image/png" media="(max-width: 767px)" srcset="img/01img_mobile@1x.png 1x, img/01img_mobile@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/01img_desktop@1x.webp 1x, img/01img_desktop@2x.webp 2x">
+              <img class="photo__img" src="img/01img_desktop@1x.png" srcset="img/01img_desktop@1x.png 1x, img/01img_desktop@2x.png 2x" width="482" height="732" alt="Святые места.">
+            </picture>
+            <div class="photo__text">Экскурсии по Израилю и знакомство с его историей</div>
+          </div>
 
-        <div class="gallery__photo photo">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/02img_mobile@1x.webp 1x, img/02img_mobile@2x.webp 2x">
-            <source type="image/png" media="(max-width: 767px)" srcset="img/02img_mobile@1x.png 1x, img/02img_mobile@2x.png 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/21img_desktop@1x.webp 1x, img/02img_desktop@2x.webp 2x">
-            <img class="photo__img" src="img/02img_desktop@1x.png" srcset="img/02img_desktop@1x.png 1x, img/02img_desktop@2x.png 2x" width="211" height="318" alt="Изучение иврита.">
-          </picture>
-          <h6 class="photo__text">Изучение иврита</h6>
-        </div>
+          <div class="gallery__photo  live-in__item live-in__item-second photo swiper-slide">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/02img_mobile@1x.webp 1x, img/02img_mobile@2x.webp 2x">
+              <source type="image/png" media="(max-width: 767px)" srcset="img/02img_mobile@1x.png 1x, img/02img_mobile@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/21img_desktop@1x.webp 1x, img/02img_desktop@2x.webp 2x">
+              <img class="photo__img" src="img/02img_desktop@1x.png" srcset="img/02img_desktop@1x.png 1x, img/02img_desktop@2x.png 2x" width="211" height="318" alt="Изучение иврита.">
+            </picture>
+            <div class="photo__text">Изучение иврита</div>
+          </div>
 
-        <div class="gallery__photo photo">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/03img_mobile@1x.webp 1x, img/03img_mobile@2x.webp 2x">
-            <source type="image/png" media="(max-width: 767px)" srcset="img/03img_mobile@1x.png 1x, img/03img_mobile@2x.png 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/03img_desktop@1x.webp 1x, img/03img_desktop@2x.webp 2x">
-            <img class="photo__img" src="img/03img_desktop@1x.png" srcset="img/03img_desktop@1x.png 1x, img/03img_desktop@2x.png 2x" width="411" height="318" alt="Современные навыки.">
-          </picture>
-          <h6 class="photo__text">Обучение современным навыкам и профессиям</h6>
-        </div>
+          <div class="gallery__photo live-in__item live-in__item-third photo swiper-slide">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/03img_mobile@1x.webp 1x, img/03img_mobile@2x.webp 2x">
+              <source type="image/png" media="(max-width: 767px)" srcset="img/03img_mobile@1x.png 1x, img/03img_mobile@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/03img_desktop@1x.webp 1x, img/03img_desktop@2x.webp 2x">
+              <img class="photo__img" src="img/03img_desktop@1x.png" srcset="img/03img_desktop@1x.png 1x, img/03img_desktop@2x.png 2x" width="411" height="318" alt="Современные навыки.">
+            </picture>
+            <div class="photo__text">Обучение современным навыкам и профессиям</div>
+          </div>
 
-        <div class="gallery__photo photo">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/04img_mobile@1x.webp 1x, img/04img_mobile@2x.webp 2x">
-            <source type="image/png" media="(max-width: 767px)" srcset="img/04img_mobile@1x.png 1x, img/04img_mobile@2x.png 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/04img_desktop@1x.webp 1x, img/04img_desktop@2x.webp 2x">
-            <img class="photo__img" src="img/04img_desktop@1x.png" srcset="img/04img_desktop@1x.png 1x, img/04img_desktop@2x.png 2x" width="411" height="318" alt="Совместное фото.">
-          </picture>
-          <h6 class="photo__text">Совместные творческие проекты с израильской молодёжью</h6>
-        </div>
+          <div class="gallery__photo live-in__item live-in__item-fourth photo swiper-slide">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/04img_mobile@1x.webp 1x, img/04img_mobile@2x.webp 2x">
+              <source type="image/png" media="(max-width: 767px)" srcset="img/04img_mobile@1x.png 1x, img/04img_mobile@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/04img_desktop@1x.webp 1x, img/04img_desktop@2x.webp 2x">
+              <img class="photo__img" src="img/04img_desktop@1x.png" srcset="img/04img_desktop@1x.png 1x, img/04img_desktop@2x.png 2x" width="411" height="318" alt="Совместное фото.">
+            </picture>
+            <div class="photo__text">Совместные творческие проекты с израильской молодёжью</div>
+          </div>
 
-        <div class="gallery__photo photo">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/05img_mobile@1x.webp 1x, img/05img_mobile@2x.webp 2x">
-            <source type="image/png" media="(max-width: 767px)" srcset="img/05img_mobile@1x.png 1x, img/05img_mobile@2x.png 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/05img_desktop@1x.webp 1x, img/05img_desktop@2x.webp 2x">
-            <img class="photo__img" src="img/05img_desktop@1x.png" srcset="img/05img_desktop@1x.png 1x, img/05img_desktop@2x.png 2x" width="214" height="318" alt="Развитие лидерства.">
-          </picture>
-          <h6 class="photo__text">Развитие лидерства</h6>
+          <div class="gallery__photo live-in__item live-in__item-fifth photo swiper-slide">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/05img_mobile@1x.webp 1x, img/05img_mobile@2x.webp 2x">
+              <source type="image/png" media="(max-width: 767px)" srcset="img/05img_mobile@1x.png 1x, img/05img_mobile@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/05img_desktop@1x.webp 1x, img/05img_desktop@2x.webp 2x">
+              <img class="photo__img" src="img/05img_desktop@1x.png" srcset="img/05img_desktop@1x.png 1x, img/05img_desktop@2x.png 2x" width="214" height="318" alt="Развитие лидерства.">
+            </picture>
+            <div class="photo__text">Развитие лидерства</div>
+          </div>
         </div>
       </div>
+      <div class="live-in__pagination swiper-pagination"></div>
     </div>
   </section>
+
   <section class="hashtag">
     <div class="hashtag__container container">
       <div class="hashtag__wrapper">
-        <h2 class="hashtag__title title">#masaisrael</h2>
+        <h2>#masaisrael</h2>
         <p class="hashtag__text text">Познакомьтесь с программой от первого лица ! Многие участники ведут блоги и фотодневникио жизни, учёбе и путешествиях в Израиле.</p>
-        <a href="#gallery" class="hashtag__button button">смотреть фото</a>
+        <a href="#gallery" class="hashtag__button button">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <use xlink:href="#icon-instagram"></use>
+          </svg>
+        смотреть фото</a>
       </div>
     </div>
   </section>
+
   <section class="faq">
     <div class="faq__container container">
       <div class="faq__wrapper">
-        <h2 class="faq__title title">частые вопросы</h2>
+        <h2>частые вопросы</h2>
         <ul class="faq__list">
           <li class="faq__item">
             <details class="faq__answer">
@@ -268,9 +269,10 @@
       </div>
     </div>
   </section>
+
   <section class="feedback">
     <div class="feedback__container container">
-      <h2 class="feedback__title title">Отзывы</h2>
+      <h2>Отзывы</h2>
       <div class="feedback__wrapper">
         <div class="feedback__comment comment">
           <div class="comment__container">
@@ -309,7 +311,7 @@
             </ul>
           </div>
         </div>
-        <div class="feedback__comment comment">
+        <div class="feedback__comment comment comment__block ">
           <div class="comment__container">
             <picture>
               <source type="image/webp" media="(max-width: 767px)" srcset="img/img_feedback_mobile@1x.webp 1x, img/img_feedback_mobile@2x.webp 2x">
@@ -327,10 +329,48 @@
             <blockquote class="comment__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега. С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</blockquote>
             <a class="comment__more" href="#">Читать подробнее</a>
             <div class="comment__navigation">
-              <span class="comment__count">3 / 6 </span>
+              <span class="comment__count">1 / 6 </span>
               <div class="comment__navigation-buttons navigation">
-                <button type="button" class="navigation__button">вперед</button>
-                <button type="button" class="navigation__button">Назад</button>
+                <button type="button" class="navigation__button navigation__button--back">Назад</button>
+                <button type="button" class="navigation__button navigation__button--forward">вперед</button>
+              </div>
+            </div>
+            <ul class="feedback__social social social__list">
+              <li class="social__item social__item--fb">
+                <a href="#">facebook</a>
+              </li>
+              <li class="social__item social__item--tw">
+                <a href="#">twitter</a>
+              </li>
+              <li class="social__item social__item--ins">
+                <a href="#">instagram</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="feedback__comment comment">
+          <div class="comment__container">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/img_feedback_mobile@1x.webp 1x, img/img_feedback_mobile@2x.webp 2x">
+              <source type="image/png" media="(max-width: 767px)" srcset="img/img_feedback_mobile@1x.png 1x, img/img_feedback_mobile@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/img_feedback_desktop@1x.webp 1x, img/img_feedback_desktop@2x.webp 2x">
+              <img class="comment__img" src="img/img_feedback_desktop@1x.png" srcset="img/img_feedback_desktop@1x.png 1x, img/img_feedback_desktop@2x.png 2x" width="214" height="318" alt="Развитие лидерства.">
+            </picture>
+          </div>
+          <div class="comment__container">
+            <b class="comment__author">Ирина Светлова</b>
+            <p class="comment__destination">
+              <span class="comment__program">Программа:</span>
+              Арт-Тель, февраль-сетнябрь 2017
+            </p>
+            <blockquote class="comment__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега. С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</blockquote>
+            <a class="comment__more" href="#">Читать подробнее</a>
+            <div class="comment__navigation">
+              <span class="comment__count">2 / 6 </span>
+              <div class="comment__navigation-buttons navigation">
+
+                <button type="button" class="navigation__button navigation__button--back">Назад</button>
+                <button type="button" class="navigation__button navigation__button--forward">вперед</button>
               </div>
             </div>
             <ul class="feedback__social social social__list">
@@ -366,8 +406,8 @@
             <div class="comment__navigation">
               <span class="comment__count">3 / 6 </span>
               <div class="comment__navigation-buttons navigation">
-                <button type="button" class="navigation__button">вперед</button>
-                <button type="button" class="navigation__button">Назад</button>
+                <button type="button" class="navigation__button navigation__button--back">Назад</button>
+                <button type="button" class="navigation__button navigation__button--forward">вперед</button>
               </div>
             </div>
             <ul class="feedback__social social social__list">
@@ -401,10 +441,10 @@
             <blockquote class="comment__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега. С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</blockquote>
             <a class="comment__more" href="#">Читать подробнее</a>
             <div class="comment__navigation">
-              <span class="comment__count">3 / 6 </span>
+              <span class="comment__count">4 / 6 </span>
               <div class="comment__navigation-buttons navigation">
-                <button type="button" class="navigation__button">вперед</button>
-                <button type="button" class="navigation__button">Назад</button>
+                <button type="button" class="navigation__button navigation__button--back">Назад</button>
+                <button type="button" class="navigation__button navigation__button--forward">вперед</button>
               </div>
             </div>
             <ul class="feedback__social social social__list">
@@ -438,47 +478,10 @@
             <blockquote class="comment__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега. С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</blockquote>
             <a class="comment__more" href="#">Читать подробнее</a>
             <div class="comment__navigation">
-              <span class="comment__count">3 / 6 </span>
+              <span class="comment__count">5 / 6 </span>
               <div class="comment__navigation-buttons navigation">
-                <button type="button" class="navigation__button">вперед</button>
-                <button type="button" class="navigation__button">Назад</button>
-              </div>
-            </div>
-            <ul class="feedback__social social social__list">
-              <li class="social__item social__item--fb">
-                <a href="#">facebook</a>
-              </li>
-              <li class="social__item social__item--tw">
-                <a href="#">twitter</a>
-              </li>
-              <li class="social__item social__item--ins">
-                <a href="#">instagram</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="feedback__comment comment">
-          <div class="comment__container">
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/img_feedback_mobile@1x.webp 1x, img/img_feedback_mobile@2x.webp 2x">
-              <source type="image/png" media="(max-width: 767px)" srcset="img/img_feedback_mobile@1x.png 1x, img/img_feedback_mobile@2x.png 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/img_feedback_desktop@1x.webp 1x, img/img_feedback_desktop@2x.webp 2x">
-              <img class="comment__img" src="img/img_feedback_desktop@1x.png" srcset="img/img_feedback_desktop@1x.png 1x, img/img_feedback_desktop@2x.png 2x" width="214" height="318" alt="Развитие лидерства.">
-            </picture>
-          </div>
-          <div class="comment__container">
-            <b class="comment__author">Ольга Михайлова</b>
-            <p class="comment__destination">
-              <span class="comment__program">Программа:</span>
-              Арт-Тель, февраль-сетнябрь 2017
-            </p>
-            <blockquote class="comment__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега. С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</blockquote>
-            <a class="comment__more" href="#">Читать подробнее</a>
-            <div class="comment__navigation">
-              <span class="comment__count">3 / 6 </span>
-              <div class="comment__navigation-buttons navigation">
-                <button type="button" class="navigation__button">вперед</button>
-                <button type="button" class="navigation__button">Назад</button>
+                <button type="button" class="navigation__button navigation__button--back">Назад</button>
+                <button type="button" class="navigation__button navigation__button--forward">вперед</button>
               </div>
             </div>
             <ul class="feedback__social social social__list">
@@ -500,51 +503,65 @@
 
   <section class="details">
     <div class="details__container container">
-      <h2 class="details__title title">Узнать подробности</h2>
-      <dl class="details__city">
-        <dt>Ваш город</dt>
-        <dd>новосибирск</dd>
-      </dl>
-      <div class="details__curator curator">
-        <picture>
-          <source type="image/webp" srcset="img/img_avatar_curator@1x.webp 1x, img/img_avatar_curator@2x.webp 2x">
-          <img class="details__img" src="img/img_avatar_curator@1.png" srcset="img/img_avatar_curator@1x.png 1x, img/img_avatar_curator@2x.png 2x" width="112" height="112" alt="Фото куратора.">
-        </picture>
-        <div class="curator__name">Ваш куратор: <p>Анна Горелик</p>
+      <div class="details__wrapper">
+        <h2>Узнать подробности</h2>
+        <dl class="details__city">
+          <dt>Ваш город:</dt>
+          <dd>новосибирск</dd>
+        </dl>
+
+        <div class="details__curator curator">
+          <div  class="details__img">
+            <picture>
+              <source type="image/webp" srcset="img/img_avatar_curator@1x.webp 1x, img/img_avatar_curator@2x.webp 2x">
+              <img src="img/img_avatar_curator@1.png" srcset="img/img_avatar_curator@1x.png 1x, img/img_avatar_curator@2x.png 2x" width="112" height="112" alt="Фото куратора.">
+            </picture>
+          </div>
+          <div class="curator__name">Ваш куратор: <p>Анна Горелик</p>
+          </div>
+          <address class="curator__address">Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</address>
+          <ul class="curator__social social social__list">
+            <li class="social__item social__item--fb">
+              <a href="#">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <use xlink:href="#icon-facebook"></use>
+                </svg>
+              facebook</a>
+            </li>
+            <li class="social__item social__item--wup">
+              <a href="#">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg>
+              twitter</a>
+            </li>
+            <li class="social__item social__item--tlgrm">
+              <a href="#">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg>
+              instagram</a>
+            </li>
+          </ul>
+          <p class="curator__text">Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою!</p>
         </div>
-        <address class="curator__address">Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</address>
-        <ul class="curator__social social social__list">
-          <li class="social__item social__item--fb">
-            <a href="#">facebook</a>
-          </li>
-          <li class="social__item social__item--wup">
-            <a href="#">twitter</a>
-          </li>
-          <li class="social__item social__item--tlgrm">
-            <a href="#">instagram</a>
-          </li>
-        </ul>
-        <p class="curator__text">Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё ! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !</p>
       </div>
-    </div>
-    <div class="details__map-container">
-      <picture>
-        <source type="image/webp" media="(max-width: 767px)" srcset="img/img_map@1x.webp 1x, img/img_map@2x.webp 2x">
-        <source type="image/png" media="(max-width: 767px)" srcset="img/img_map@1x.png 1x, img/img_map@2x.png 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/map_desktop@1x.webp 1x, img/map_desktop@2x.webp 2x">
-        <img class="details__img" src="img/map_desktop@1x.png" srcset="img/map_desktop@1x.png 1x, img/map_desktop@2x.png 2x" width="702" height="448" alt="Адрес">
-      </picture>
-    </div>
-    <div class="details__callback callback">
-      <strong class="callback__losung">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим !</strong>
-      <p class="callback__text">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
-      <form action="post" class="callback__form form">
-        <label class="visually-hidden" for="details_name">Имя</label>
-        <input type="text" name="details_name" id="details_name" placeholder="Имя" required>
-        <label class="visually-hidden" for="details_phone">Имя</label>
-        <input type="tel" name="details_phone" id="details_phone" maxlength="20" autocomplete="off" placeholder="+7 (923) 41" required>
-        <button type="submit" class="form__button button">перезвоните мне</button>
-      </form>
+
+      <div class="details__map-container">
+      </div>
+      <div class="details__callback callback">
+        <div class="callback__speech">
+          <strong class="callback__losung">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</strong>
+          <p class="callback__text">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
+        </div>
+        <form action="post" class="callback__form form">
+          <label class="visually-hidden" for="details_name">Имя</label>
+          <input type="text" name="details_name" id="details_name" placeholder="Имя" required>
+          <label class="visually-hidden" for="details_phone">Имя</label>
+          <input type="tel" name="details_phone" id="details_phone" maxlength="20" autocomplete="off" placeholder="+7 (923) 41" required>
+          <button type="submit" class="callback_button form__button button">перезвоните мне</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -553,19 +570,31 @@
       <a href="#">
         <picture>
           <source type="image/webp" srcset="img/logo_footer@1x.webp 1x, img/logo_footer@2x.webp 2x">
-          <img class="details__img" src="img/logo_footer@1x.png" srcset="img/logo_footer@1x.png 1x, img/logo_footer@2x.png 2x" width="85" height="27" alt="Лого в подвале">
+          <img class="footer__logo" src="img/logo_footer@1x.png" srcset="img/logo_footer@1x.png 1x, img/logo_footer@2x.png 2x" width="85" height="27" alt="Лого в подвале">
         </picture>
       </a>
       <p class="footer__copyright">Copyright someDesignCompany ©2019</p>
       <ul class="footer__social social social__list">
         <li class="social__item social__item--fb">
-          <a href="#">facebook</a>
+          <a href="#">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <use xlink:href="#icon-facebook"></use>
+          </svg>
+          facebook</a>
         </li>
         <li class="social__item social__item--tw">
-          <a href="#">twitter</a>
+          <a href="#">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <use xlink:href="#icon-twitter"></use>
+          </svg>
+          twitter</a>
         </li>
         <li class="social__item social__item--ins">
-          <a href="#">instagram</a>
+          <a href="#">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <use xlink:href="#icon-instagram"></use>
+          </svg>
+          instagram</a>
         </li>
       </ul>
     </div>
@@ -574,7 +603,7 @@
   <div class="overlay"></div>
   <div class="popup popup__overlay">
     <div class="popup__container">
-      <button class="popup__close">Закрыть</button>
+      <button type="button" class="popup__close" aria-label="Закрытие попапа"></button>
       <div class="popup__transmition">
         <h2 class="popup__title title">Заказать звонок</h2>
         <p class="popup__text">Оставьте ваши контактные данные, мы свяжемсяс вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос !</p>
@@ -584,7 +613,7 @@
           <label class="visually-hidden" for="popup_phone">Телефон</label>
           <input type="tel" name="popup_phone" id="popup_phone" maxlength="20" autocomplete="on" required placeholder="Телефон">
           <button type="submit" class="form__button button">перезвоните мне</button>
-          <label for="data_process" class="form__checkbox">
+          <label for="data_process" class="popup__checkbox">
           <input type="checkbox" name="data_process" id="data_process">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
         </form>
       </div>

@@ -1,4 +1,4 @@
-.title {
+h2 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -15,7 +15,13 @@
   }
 }
 
-.title__small {
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: $font-color-title;
   font-size: 28px;
   line-height: 34px;
 

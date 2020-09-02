@@ -1,29 +1,10 @@
 .programs {
   @include adaptive-block;
   padding: 0 200px;
-}
-
-.programs__container {
-  display: flex;
-}
-
-.programs__btns {
-  display: flex;
-  flex-direction: column;
-}
-
-.programs__item {
   display: none;
 }
 
-.programs__list {
-  @include list-reset;
-}
-
-.programs__item--shown {
-  display: block;
-}
-
-.programs__list--shown {
+.programs__definition-list {
   display: flex;
+  // flex-direction: column;
 }

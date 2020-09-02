@@ -1,21 +1,30 @@
 .main {
   @include adaptive-block;
   display: flex;
+  margin-top: -100px;
   flex-direction: column;
+  padding: 400px 25px 100px;
   align-items: center;
+  background-image: url("../img/main-screen_desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 
   @media (max-width: $mobile-width) {
+    // background-size: contain;
+    padding: 304px 0 2px;
     margin-top: -44px;
+    background-image: url("../img/main-screen_mobile@1x.png");
   }
 }
 
-.main__img {
-  @include fullscreen-img;
+// .main__img {
+//   @include fullscreen-img;
 
-  @media (max-width: $mobile-width) {
-    min-width: 320px;
-  }
-}
+//   @media (max-width: $mobile-width) {
+//     min-width: 320px;
+//   }
+// }
 
 .main__description {
   color: $font-color-white;
@@ -24,7 +33,7 @@
   font-size: 24px;
   line-height: 29px;
   max-width: 400px;
-  margin: -350px auto 0;
+  margin: 0 auto;
   padding: 0 20px 10px;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 
@@ -32,7 +41,7 @@
     font-size: 20px;
     line-height: 24px;
     padding: 0 15px 10px;
-    margin: -300px auto 20px;
+    margin: 0 auto 20px;
   }
 }
 
@@ -59,7 +68,8 @@
     left: 50%;
 
     @media (max-width: $mobile-width) {
-      height: 80px;
+      height: 140px;
+      top: 80px;
     }
   }
 

@@ -11,7 +11,8 @@
     background-image: url("../img/bg-masaisrael_desktop@2x.png");
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: 525px) {
+    background-size: contain;
     background-image: url("../img/bg-masaisrael_mobile@1x.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -32,13 +33,16 @@
     margin: 0;
     padding: 20px 0;
     width: auto;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
-.hashtag__title {
+.hashtag h2 {
   @media (max-width: $mobile-width) {
     font-size: 40px;
     line-height: 49px;
+    margin-bottom: 20%;
   }
 }
 
@@ -48,27 +52,29 @@
   color: $font-color-white;
   padding-bottom: 50px;
 
-  @media (max-width: $mobile-width) {
-    // padding: 0 20px 50px;
-  }
+  // @media (max-width: $mobile-width) {
+  // padding: 0 20px 50px;
+  // }
 }
 
 .hashtag__button {
-  padding-left: 40px;
+  padding-left: 50px;
   position: relative;
+  text-decoration: none;
 
   @media (max-width: $mobile-width) {
     margin: 0 auto;
   }
 
-  &::before {
+  & svg {
     position: absolute;
     content: "";
     display: block;
     width: 25px;
     height: 25px;
     left: 15px;
-    top: 5px;
-    background-image: url("../img/icon-instagram.svg");
+    top: 12px;
+    // background-image: url("../img/icon-instagram.svg");
+    fill: $bg-color-document;
   }
 }
