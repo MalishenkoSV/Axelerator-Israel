@@ -1,9 +1,9 @@
 .main {
   @include adaptive-block;
   display: flex;
-  margin-top: -100px;
+  margin-top: -90px;
   flex-direction: column;
-  padding: 400px 25px 100px;
+  padding: 537px 25px 49px;
   align-items: center;
   background-image: url("../img/main-screen_desktop@1x.png");
   background-repeat: no-repeat;
@@ -18,22 +18,14 @@
   }
 }
 
-// .main__img {
-//   @include fullscreen-img;
-
-//   @media (max-width: $mobile-width) {
-//     min-width: 320px;
-//   }
-// }
-
-.main__description {
+.main p {
   color: $font-color-white;
   text-align: center;
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   padding: 0 20px 10px;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 
@@ -48,8 +40,8 @@
 .main__scroll {
   position: relative;
   display: inline-block;
-  margin: 0 auto 140px;
-  padding: 20px;
+  margin: 0 auto 133px;
+  padding: 10px;
   border-radius: 50%;
   border: 2px dashed $font-color-white;
   transition-duration: 0.5s;
@@ -62,9 +54,9 @@
     content: "";
     position: absolute;
     width: 1px;
-    height: 200px;
+    height: 180px;
     background-color: $font-color-white;
-    top: 100px;
+    top: 760px;
     left: 50%;
 
     @media (max-width: $mobile-width) {

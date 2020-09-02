@@ -1,11 +1,16 @@
 .header {
   width: 100%;
+  padding-top: 22px;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 0;
+  }
 }
 
 .header__comunication {
   display: flex;
   justify-content: space-between;
-  // width: 95%;
+  align-items: center;
   max-width: $max-width-container;
   margin: 0 auto;
   padding: 10px 30px;
@@ -23,10 +28,10 @@
   text-decoration: none;
   text-transform: uppercase;
   line-height: 18px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   color: inherit;
-  padding: 10px;
+  padding: 10px 0 0;
   display: block;
   transition-duration: 0.5s;
 
@@ -56,6 +61,7 @@
 }
 
 .header__link--dashed {
+  font-size: 14px;
   border-bottom: 2px dashed $font-color-black;
 
   &:hover {
